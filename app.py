@@ -22,6 +22,7 @@ def astro_list():
         list_of_astronauts.append(item["name"])
     return list_of_astronauts
 
+
 @app.route('/astro/craft/<craft_name>')
 def craft_crew(craft_name):
     craft_list = astro_dict["people"]
@@ -30,6 +31,7 @@ def craft_crew(craft_name):
         if item["craft"] == craft_name:
             crew_list.append(item["name"])
     return crew_list
+
 
 if __name__ == '__main__':
     app.run()
